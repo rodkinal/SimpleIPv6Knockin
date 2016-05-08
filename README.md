@@ -37,7 +37,9 @@ Examples:
 ##### 1.2.2 Tutorial video
 https://youtu.be/jWFutlGePb4
 
-# 2. IPv6 Basics
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jWFutlGePb4/0.jpg)](https://www.youtube.com/watch?v=jWFutlGePb4)
+
+# IPv6 Basics
 ### 2.1 IPv6 description
     An Internet Protocol Version 6 address (IPv6 address) is a numerical label that is used to identify a network interface of a computer or other network node participating in an IPv6 computer network.
     An IP address serves the purpose of uniquely identifying an individual network interface of a host, locating it on the network, and thus permitting the routing of IP packets between hosts. For routing, IP addresses are present in fields of the packet header where they indicate source and destination of the packet.

@@ -23,7 +23,7 @@ $ sudo ./scapy-latest.zip
 ####1.2 Using the program 
 You can use this program as a knocking protocol to execute different commands on a remote system based on different source IPv6 (remember that /64 is assigned to the user). When the server detects that a valid sequence has been received, it will execute the configured system command. This is useful to start or stop different services on the server side (like SSH, Apache, etc.). Briefing, this program is a latch for your live services, so you can start and stop them whenever you need. TCP or UDP protocols are both available in order to receive the valid sequence. You can also choose the destination port narrowing the scope of possible brute forcing attacks. 
 
-Using IPv6 you are able to send any packet included into your /64 network. Using that characteric of IPv6, this program is detects if the las octets of the source IP complains a valid sequence. When a valid sequence is detected, the configured program is executed on the listening host. 
+Using IPv6 you are able to send any packet included into your /64 network. Using that characteric of IPv6, this program detects if the last octets of the source IP complains a valid sequence. When a valid sequence is detected, the configured program is executed on the listening host. 
 
 #####1.2.1 Usage on client side
 ```sh

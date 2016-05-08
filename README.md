@@ -1,4 +1,4 @@
-# SimpleIPv6Knockin
+# SimpleIPv6Knockin (v0.1)
 This is just a simple IPv6 Knocking program. Will let you execute commands on a server side based on a source IP combination. 
 ####1.1 Installation
 This program just needs Scapy to be executed. You can install it from your distro repository or download it from Scapy website.

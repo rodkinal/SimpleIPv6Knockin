@@ -79,7 +79,7 @@ Or in background:
 ```sh
 sudo nohup python SimpleIPv6Knocking_server.py &
 ```
-The configuration file 
+
 ####1.3 Tutorial video
 https://youtu.be/jWFutlGePb4
 

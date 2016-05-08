@@ -40,7 +40,7 @@ Examples:
 
 You need to configure the config.cfg file which contains the needed information to send a valid sequence to the remote host. This file contains the destination port, transport protocol to be used (UDP/TCP), the valid sequences (to open or close services), the destination address and the local interface to send the proper sequence. The configuration file contains: 
  ```sh
- [network_config]
+[network_config]
 destination_address = fe80::a00:27ff:fe8a:93ba
 interface = eth0
 destination_port = 22
@@ -80,12 +80,12 @@ Or in background:
 sudo nohup python SimpleIPv6Knocking_server.py &
 ```
 The configuration file 
-#####1.2.2 Tutorial video
+####1.3 Tutorial video
 https://youtu.be/jWFutlGePb4
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jWFutlGePb4/0.jpg)](https://www.youtube.com/watch?v=jWFutlGePb4)
 
-####1.2.3 IPv6 Basics
+####1.4 IPv6 Basics
 
 
 More information: 

@@ -44,6 +44,7 @@ https://youtu.be/jWFutlGePb4
 > IPv6 is the successor to the first addressing infrastructure of the Internet, Internet Protocol version 4 (IPv4). In contrast to IPv4, which defined an IP address as a 32-bit value, IPv6 addresses have a size of 128 bits. Therefore, IPv6 has a vastly enlarged address space compared to IPv4.
 > An IPv6 address consists of 128 bits. Addresses are classified into various types for applications in the major addressing and routing methodologies: unicast, multicast, and anycast networking. In each of these, various address formats are recognized by logically dividing the 128 address bits into bit groups and establishing rules for associating the values of these bit groups with special addressing features.
 
-### 2.2 Unicast and anycast address format
-> Unicast and anycast addresses are typically composed of two logical parts: a 64-bit network prefix used for routing, and a 64-bit interface identifier used to identify a host's network interface.
+More information: 
 
+    - https://en.wikipedia.org/wiki/IPv6_address
+    - https://www.ietf.org/rfc/rfc2460.txt

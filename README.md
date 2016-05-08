@@ -45,6 +45,5 @@ https://youtu.be/jWFutlGePb4
     An IPv6 address consists of 128 bits. Addresses are classified into various types for applications in the major addressing and routing methodologies: unicast, multicast, and anycast networking. In each of these, various address formats are recognized by logically dividing the 128 address bits into bit groups and establishing rules for associating the values of these bit groups with special addressing features.
 
 More information: 
-
     - https://en.wikipedia.org/wiki/IPv6_address
     - https://www.ietf.org/rfc/rfc2460.txt

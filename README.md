@@ -1,4 +1,4 @@
-# SimpleIPv6Knockin (v0.1)
+# SimpleIPv6Knockin
 This is just a simple IPv6 Knocking program. Will let you execute commands on a server side based on a source IP combination. 
 ####1.1 Installation
 This program just needs Scapy to be executed. You can install it from your distro repository or download it from Scapy website.
@@ -23,8 +23,11 @@ $ sudo ./scapy-latest.zip
 ####1.2 Using the program 
 You can use this program as a knocking protocol to execute different commands on a remote system based on different source IPv6 (remember that /64 is assigned to the user). When the server detects that a valid sequence has been received, it will execute the configured system command. You can use this to start or stop different services on your server (like SSH, Apache, etc.). In summary, this program is a latch for your live services, so you can start and stop them whenever you need. You can select between TCP or UDP protocol in order to receive the valid sequence. You can also choose the destination port narrowing the scope of possible brute forcing attacks. 
 
+Using IPv6 you are able to send any packet which are included into your /64 network. Using that characteric of IPv6, this program is detects if the las octets of the source IP complains a valid sequence. When a valid sequence is detected, the configured program is executed on the listening host. 
+
 #####1.2.1 Usage on client side
 ```sh
+python SimpleIPv6Knocking_client.py -h
 Flags:
     -a  --action    Set action to be executed on a remote system [open|close]
     -f  --files     Use config files to execute commands on a remote system
@@ -34,6 +37,19 @@ Examples:
     SimpleIP6Knocking_client.py -a open -f config_file_1.cfg
     SimpleIP6Knocking_client.py -v -a close -f config_file_1.cfg config_file_2.cfg
 ```
+
+You need to configure the config.cfg file which contains the needed information to send a valid sequence to the remote host. This file contains the destination port, transport protocol to be used (UDP/TCP), the valid sequences (to open or close services), the destination address and the local interface to send the proper sequence. 
+
+#####1.2.2 Usage on server side
+Execute the program as a service or in the background. This program will listen all the packets sended to the configured interface which complains the protocol and port configuration. If a valid sequence is received (open) the program will execute the configured open command. When the open command has been executed, the program will wait until the close sequence is received to execute the close command. It will be listening forever unless you stop de application. 
+```sh
+sudo python SimpleIPv6Knocking_server.py
+```
+Or in background: 
+```sh
+sudo nohup python SimpleIPv6Knocking_server.py &
+```
+
 #####1.2.2 Tutorial video
 https://youtu.be/jWFutlGePb4
 

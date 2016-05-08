@@ -38,10 +38,40 @@ Examples:
     SimpleIP6Knocking_client.py -v -a close -f config_file_1.cfg config_file_2.cfg
 ```
 
-You need to configure the config.cfg file which contains the needed information to send a valid sequence to the remote host. This file contains the destination port, transport protocol to be used (UDP/TCP), the valid sequences (to open or close services), the destination address and the local interface to send the proper sequence. 
+You need to configure the config.cfg file which contains the needed information to send a valid sequence to the remote host. This file contains the destination port, transport protocol to be used (UDP/TCP), the valid sequences (to open or close services), the destination address and the local interface to send the proper sequence. The configuration file contains: 
+ ```sh
+ [network_config]
+destination_address = fe80::a00:27ff:fe8a:93ba
+interface = eth0
+destination_port = 22
+protocol = udp
+
+[valid_sequences]
+open_sequence = bbb,ccc,aaa
+close_sequence = 111,222,333
+```
 
 #####1.2.2 Usage on server side
-Execute the program as a service or in the background. This program will listen all the packets sended to the configured interface which complains the protocol and port configuration. If a valid sequence is received (open) the program will execute the configured open command. When the open command has been executed, the program will wait until the close sequence is received to execute the close command. It will be listening forever unless you stop de application. 
+Execute the program as a service or in the background. This program will listen all the packets sended to the configured interface which complains the protocol and port configuration. If a valid sequence is received (open) the program will execute the configured open command. When the open command has been executed, the program will wait until the close sequence is received to execute the close command. It will be listening forever unless you stop de application. The configuration file (server_config.cfg) contains the server configuration which includes: 
+
+```sh
+[network_config]
+iface = eth1
+destination_port = 22
+protocol = udp
+
+# Valid IPv6 end sequence to execute commands on the server side
+[valid_sequences]
+open_sequence = bbb,ccc,aaa
+close_sequence = 111,222,333
+
+# Commands to be executed when a valid sequence is detected
+[commands]
+open_command = sudo start ssh
+close_command = sudo stop ssh
+```
+Executing the program: 
+
 ```sh
 sudo python SimpleIPv6Knocking_server.py
 ```
@@ -49,7 +79,7 @@ Or in background:
 ```sh
 sudo nohup python SimpleIPv6Knocking_server.py &
 ```
-
+The configuration file 
 #####1.2.2 Tutorial video
 https://youtu.be/jWFutlGePb4
 

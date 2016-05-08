@@ -1,7 +1,7 @@
 # SimpleIPv6Knockin
 This is just a simple IPv6 Knocking program. Will let you execute commands on a server side based on a source IP combination. 
 ####1.1 Installation
-This program just needs Scapy to be executed. You can install it from your distro repository or download it from Scapy website.
+This program just needs Scapy to be executed. You can install it from your distro repository or get it from Scapy website.
 ######1.1.1 Scapy from repository
 ```sh
 sudo apt-get install python-scapy
@@ -21,9 +21,9 @@ $ sudo ./scapy-latest.zip
 ```
 
 ####1.2 Using the program 
-You can use this program as a knocking protocol to execute different commands on a remote system based on different source IPv6 (remember that /64 is assigned to the user). When the server detects that a valid sequence has been received, it will execute the configured system command. You can use this to start or stop different services on your server (like SSH, Apache, etc.). In summary, this program is a latch for your live services, so you can start and stop them whenever you need. You can select between TCP or UDP protocol in order to receive the valid sequence. You can also choose the destination port narrowing the scope of possible brute forcing attacks. 
+You can use this program as a knocking protocol to execute different commands on a remote system based on different source IPv6 (remember that /64 is assigned to the user). When the server detects that a valid sequence has been received, it will execute the configured system command. This is useful to start or stop different services on the server side (like SSH, Apache, etc.). Briefing, this program is a latch for your live services, so you can start and stop them whenever you need. TCP or UDP protocols are both available in order to receive the valid sequence. You can also choose the destination port narrowing the scope of possible brute forcing attacks. 
 
-Using IPv6 you are able to send any packet which are included into your /64 network. Using that characteric of IPv6, this program is detects if the las octets of the source IP complains a valid sequence. When a valid sequence is detected, the configured program is executed on the listening host. 
+Using IPv6 you are able to send any packet included into your /64 network. Using that characteric of IPv6, this program is detects if the las octets of the source IP complains a valid sequence. When a valid sequence is detected, the configured program is executed on the listening host. 
 
 #####1.2.1 Usage on client side
 ```sh

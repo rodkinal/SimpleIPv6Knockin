@@ -83,7 +83,7 @@ sudo nohup python SimpleIPv6Knocking_server.py &
 ####1.3 Tutorial video
 https://youtu.be/jWFutlGePb4
 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jWFutlGePb4/0.jpg)](https://www.youtube.com/watch?v=jWFutlGePb4noNo)
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/jWFutlGePb4/0.jpg)](https://www.youtube.com/watch?v=)
 
 ####1.4 IPv6 Basics
 
